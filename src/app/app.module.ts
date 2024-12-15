@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GraphQLModule } from './graphql.module';
 import { HeaderModule } from '@shared/components/header/header.module';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { HeaderModule } from '@shared/components/header/header.module';
     AppRoutingModule,
     HttpClientModule,
     GraphQLModule,
-    HeaderModule
+    HeaderModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
