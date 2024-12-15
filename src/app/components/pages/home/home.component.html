@@ -1,1 +1,8 @@
-<p>home works!</p>
+<section class="container my-4">
+  <h2 class="mb-4 text-center">Personajes Favoritos</h2>
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <app-characters-card
+      *ngFor="let character of charactersFav$ | async" [character]="character"
+    ></app-characters-card>
+  </div>
+</section>

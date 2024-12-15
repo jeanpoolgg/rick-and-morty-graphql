@@ -30,11 +30,13 @@
       Ver más información
     </a>
     <button
-      type="button"
-      (click)="toggleFavorite()"
-      class="btn btn-outline-secondary btn-sm"
-      title="Agregar a favoritos">
-      <i class="bi bi-heart"></i>
-    </button>
+    type="button"
+    (click)="toggleFavorite()"
+    class="btn btn-outline-secondary btn-sm"
+    title="Agregar a favoritos">
+    <i [ngClass]="getIcon()"></i>
+  </button>
+
+
   </div>
 </div>

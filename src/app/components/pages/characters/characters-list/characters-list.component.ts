@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '@app/shared/services/data.service';
+import { LocalStorageService } from '../../../../shared/services/local-storage.service';
 
 @Component({
   selector: 'app-characters-list',
@@ -8,7 +9,10 @@ import { DataService } from '@app/shared/services/data.service';
 })
 export class CharactersListComponent {
     characters$ = this.dataSvc.characters$;
-    constructor(private dataSvc: DataService){}
+    constructor(
+      private dataSvc: DataService,
+      private localStorageSvc: LocalStorageService
+    ){}
 
     ngOnInit(): void {
     }
