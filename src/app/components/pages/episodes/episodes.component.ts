@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '@app/shared/services/data.service';
 
 @Component({
   selector: 'app-episodes',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './episodes.component.css'
 })
 export class EpisodesComponent {
+  episodes$ = this.dataSvc.episodes$;
 
+  constructor(private dataSvc: DataService){}
 }
