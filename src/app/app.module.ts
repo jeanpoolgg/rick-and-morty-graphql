@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GraphQLModule } from './graphql.module';
+import { HeaderModule } from '@shared/components/header/header.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GraphQLModule } from './graphql.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GraphQLModule
+    GraphQLModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

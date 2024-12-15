@@ -1,0 +1,11 @@
+ /* Estilo para el ancho del menú deslizante según el tamaño de pantalla */
+ #navbarMenu.offcanvas {
+  width: 20vw; /* 20% en pantallas grandes */
+}
+
+@media (max-width: 768px) {
+  /* 50% en pantallas móviles */
+  #navbarMenu.offcanvas {
+    width: 50vw;
+  }
+}
