@@ -1,2 +1,8 @@
-<p>characters-details works!</p>
-{{ characters$ | async | json }}
+<section class="container my-4">
+  <h2 class="mb-4 text-center">Personajes Destacados</h2>
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <app-characters-card
+      *ngFor="let character of characters$ | async" [character]="character"
+    ></app-characters-card>
+  </div>
+</section>

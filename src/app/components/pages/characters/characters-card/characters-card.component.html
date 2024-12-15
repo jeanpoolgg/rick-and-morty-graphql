@@ -1,1 +1,40 @@
-<p>characters-card works!</p>
+<div class="card character-card mx-auto">
+  <img
+    rel="preload"
+    as="image"
+    class="card-img-top"
+    [src]="character?.image"
+    [alt]="character?.name"
+  />
+  <div class="card-body d-flex flex-column">
+    <h3 class="card-title text-truncate">{{ character?.name }}</h3>
+    <p class="card-text text-truncate">
+      Breve descripción del personaje: habilidades, historia o detalles relevantes.
+    </p>
+    <ul class="list-group list-group-flush mb-3">
+      <li class="list-group-item">
+        <strong>Status:</strong> {{ character?.status }}
+      </li>
+      <li class="list-group-item">
+        <strong>Species:</strong> {{ character?.species }}
+      </li>
+      <li class="list-group-item">
+        <strong>Gender:</strong> {{ character?.gender }}
+      </li>
+    </ul>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <a
+      [routerLink]="['/character-details', character?.id]"
+      class="btn btn-primary btn-sm">
+      Ver más información
+    </a>
+    <button
+      type="button"
+      (click)="toggleFavorite()"
+      class="btn btn-outline-secondary btn-sm"
+      title="Agregar a favoritos">
+      <i class="bi bi-heart"></i>
+    </button>
+  </div>
+</div>
